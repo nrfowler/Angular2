@@ -1,0 +1,15 @@
+<div>
+  <h1>Upcoming Angular Events</h1>
+  <hr/>
+  <div class="well ">Components are CSS Encapsulated (I should be red)</div>
+  <div class="row">
+    <div class="col-md-5" *ngFor="let event of events">
+  <event-thumbnail #thumbnail [event]="event"  (eventClick)="handleEventClicked($event)"></event-thumbnail>
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="thumbnail.logFoo()">Template Variable Demo</button>
+  <h2>I am in event list: {{thumbnail.blarg}}</h2>
+
+
+</div>
+<img src="/assets/images/basic-shield.png">
